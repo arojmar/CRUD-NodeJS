@@ -3,7 +3,7 @@ CRUD de una base de datos con NodeJS (EJS)
 
 Se trata de crear una pequeña base de datos, donde los usuarios tendra asociados 1 movil con un color.
 
-Estos usuarios tendran que poder hacer todo el ciclo CRUD (Create, Read, Update & Delete) de la base de datos.
+Estos usuarios tendran que poder hacer todo el ciclo <strong>CRUD (Create, Read, Update & Delete)</strong> de la base de datos.
 
 La ruta principal (localhost:3000/) es una pagina de inicio que da la bienvenida.
 
