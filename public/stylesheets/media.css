@@ -1,0 +1,25 @@
+@media(max-width: 768px){
+
+    .table {
+        display: none;
+    }
+
+    .rowCards {
+        background-color: cornflowerblue;
+        border-radius: 1rem;
+    }
+
+    .cards {
+        display: block;
+    }
+
+    .cards ul {
+        list-style: none;
+      }
+      
+    .cards li {
+        color: black;
+        font-size: 1.1rem;
+    }
+
+}

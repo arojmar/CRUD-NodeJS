@@ -1,0 +1,40 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: cornflowerblue;
+  font-family: 'Poppins', sans-serif;;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container {
+ background-color: cornsilk;
+ border-radius: 1rem;
+ padding: 3rem 5rem;
+}
+
+.table {
+  background-color: white;
+  
+}
+
+.fa-trash-alt{
+  color: red;
+  font-size: large;
+}
+
+.fa-edit{
+  color: blue;
+  font-size: large;
+}
+
+.cabecera {
+  width: 3rem;
+}
+
+.cards {
+  display: none;
+}
+
