@@ -1,8 +1,16 @@
+html {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100%;
+}
+
 body {
-  padding: 50px;
+  padding: 0px;
+  margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: cornflowerblue;
-  font-family: 'Poppins', sans-serif;;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 60px;
 }
 
 a {
@@ -13,8 +21,30 @@ a {
  background-color: cornsilk;
  border-radius: 1rem;
  padding: 3rem 5rem;
+ 
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; 
+  line-height: 60px; 
+}
+
+
+/* Specific styles for home page */
+.container.main {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 160px);
+  display: flex;
+
+ }
+
+
+/* Specific styles for users page */
 .table {
   background-color: white;
   

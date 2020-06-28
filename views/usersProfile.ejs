@@ -2,40 +2,58 @@
 <html>
   <head>
     <title>Modificacion usuario</title>
-     <!-- Required meta tags -->
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
-     integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
-     crossorigin="anonymous">
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" 
-     href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-       crossorigin="anonymous">
-     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+    integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+    crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/media.css' />
   </head>
-  <body>
+    <body>
+      <header class="pb-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">CRUD</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" 
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="/">Home</a>
+              <a class="nav-item nav-link active" href="/users"> <span class="sr-only">(current)</span>Users</a>
+            </div>
+          </div>
+        </nav>
+      </header>
     <main>
       <div class="container">
-          <h1>Pagina de edicion usuario</h1>
+          <h1>Modification page</h1>
           <div class="row">
             <form action="/users/updated/<%= result.user_id %>" method="POST">
               <div class="form-row pt-3">
                   <div class="form-group col-md-6">
-                  <label for="inputName4">Nombre</label>
+                  <label for="inputName4">Name</label>
                   <input type="text" name="nameUser" value="<%= result.name %>" 
                   class="form-control" id="inputName4">
                   </div>
                   <div class="form-group col-md-6">
-                  <label for="inputLastName4">Apellidos</label>
+                  <label for="inputLastName4">Last Name</label>
                   <input type="text" name="lastNameUser" value="<%= result.last_name %>"
                   class="form-control" id="inputLastName4">
                   </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="inputModel2">Modelo</label>
+                  <label for="inputModel2">Phone Model</label>
                   <input type="text" name="modelPhone" value="<%= result.model %>"
                   class="form-control" id="inputModel2">
                 </div>
@@ -44,22 +62,27 @@
                   <select id="inputColor" name="colorPhone" value=""
                   class="form-control" required>
                     <option value= "<%= result.color %>"selected><%= result.color %></option>
-                    <option value="amarillo">Amarillo</option>
-                    <option value="rojo">Rojo</option>
-                    <option value="azul">Azul</option>
-                    <option value="verde">Verde</option>
-                    <option value="gris">Gris</option>
-                    <option value="blanco">Blanco</option>
-                    <option value="marron">Marron</option>
-                    <option value="morado">Morado</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Grey">Grey</option>
+                    <option value="White">White</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Purple">Purple</option>
                   </select>
                 </div>
               </div>
-              <button type="submit" class="btn btn-success">Actualizar</button>
+              <button type="submit" class="btn btn-success">Update</button>
             </form>
           </div>
       </div>
     </main>
+    <footer class="footer">
+      <div class="col-12 bg-dark text-center">
+        <span class="text-muted">Copyright &copy; 2020. Alfonso Rojo. All Rights reserved</span>
+      </div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

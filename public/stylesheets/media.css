@@ -1,5 +1,15 @@
 @media(max-width: 768px){
 
+    main {
+        margin-bottom: 80px;
+    }
+
+    /* Specific styles for home page */
+    .display-4 {
+        line-height: 3.8;
+    }
+
+    /* Specific styles for user page */
     .table {
         display: none;
     }
@@ -22,4 +32,47 @@
         font-size: 1.1rem;
     }
 
+}
+
+@media(max-width: 576px){
+
+
+    /* Specific styles for user page */
+    .pb-4 {
+        padding-bottom: 0!important;
+    }
+
+    .container {
+        padding: 10px;
+        margin: 20px;
+        width: inherit;
+        border-radius: 0.2rem;
+    }
+    
+    .row {
+        padding: 15px;
+    }
+
+    .rowCards {
+        margin-bottom: -1rem;
+        border-radius: 0;
+    }
+
+    .rowCards .cards {
+        padding: 0;
+    }
+    .cards ul {
+        padding-left: 0;
+    }
+
+    /* Specific styles for home page */
+    .display-4 {
+        font-size: 3.5rem;
+        line-height: 3.2;
+        text-align: center;
+    }
+
+    .container.main {
+        border-radius: 0.3rem;
+    }
 }

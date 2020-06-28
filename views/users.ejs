@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Listado usuarios</title>
+    <title>Users</title>
      <!-- Required meta tags -->
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- Google fonts -->
      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
@@ -14,47 +15,63 @@
      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
        crossorigin="anonymous">
+      <!-- Custom stylesheet -->
      <link rel='stylesheet' href='/stylesheets/style.css' />
      <link rel='stylesheet' href='/stylesheets/media.css' />
   </head>
   <body>
+    <header class="pb-4">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">CRUD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" 
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/">Home</a>
+            <a class="nav-item nav-link active" href="/users"> <span class="sr-only">(current)</span>Users</a>
+          </div>
+        </div>
+      </nav>
+    </header>
     <main>
       <div class="container">
-          <h1 class="text-center">Pagina de usuario</h1>
+          <h1 class="text-center">List of users</h1>
           <div class="row">
             <div class="col-12 p-0">
               <form action="/users/registered" method="POST">
                 <div class="form-row pt-3">
                     <div class="form-group col-12 col-sm-12 col-md-6 col-lg-4">
-                    <label for="inputName4">Nombre</label>
+                    <label for="inputName4">Name</label>
                     <input type="text" name="nameUser" class="form-control" id="inputName4">
                     </div>
                     <div class="form-group col-12 col-sm-12 col-md-6 col-lg-4">
-                    <label for="inputLastName4">Apellidos</label>
+                    <label for="inputLastName4">Last Name</label>
                     <input type="text" name="lastNameUser" class="form-control" id="inputLastName4">
                     </div>
                 </div>
                 <div class="form-row pb-3">
                   <div class="form-group col-12 col-sm-12 col-md-6 col-lg-4">
-                    <label for="inputModel2">Modelo</label>
+                    <label for="inputModel2">Phone Model</label>
                     <input type="text" name="modelPhone" class="form-control" id="inputModel2">
                   </div>
                   <div class="form-group col-12 col-sm-12 col-md-6 col-lg-4">
                     <label for="inputColor">Color</label>
                     <select id="inputColor" name="colorPhone" class="form-control" required>
-                      <option selected disabled>Elige...</option>
-                      <option value="amarillo">Amarillo</option>
-                      <option value="rojo">Rojo</option>
-                      <option value="azul">Azul</option>
-                      <option value="verde">Verde</option>
-                      <option value="gris">Gris</option>
-                      <option value="blanco">Blanco</option>
-                      <option value="marron">Marron</option>
-                      <option value="morado">Morado</option>
+                      <option selected disabled>Choose...</option>
+                      <option value="Yellow">Yellow</option>
+                      <option value="Red">Red</option>
+                      <option value="Blue">Blue</option>
+                      <option value="Green">Green</option>
+                      <option value="Grey">Grey</option>
+                      <option value="White">White</option>
+                      <option value="Brown">Brown</option>
+                      <option value="Purple">Purple</option>
                     </select>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-success col-sm-12 col-md-4 col-lg-3 p-2">Registrar</button>
+                <button type="submit" class="btn btn-success col-sm-12 col-md-4 col-lg-3 p-2">Register</button>
               </form>
             </div>
           </div>
@@ -64,9 +81,9 @@
                     <tr>
                         <th class="cabecera" scope="col"></>
                         <th scope="col">#</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Apellidos</th>
-                        <th scope="col">Phone</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Phone Model</th>
                         <th scope="col">Color</th>
                     </tr>
                 </thead>
@@ -99,16 +116,16 @@
           </div>
           <div class="row p-2 rowCards">
             <div class="col-12 cards w-100">
-              <h2 class="text-light text-center py-3">Registros</h2>
+              <h2 class="text-light text-center py-3">Registers</h2>
               <% result.forEach(function(result){ %>
               <div class="card border-success mb-3 col-12">
                 <div class="card-header bg-transparent border-success h2">#: <%= result.user_id %></div>
                 <div class="card-body text-dark">
                   <p class="card-text">
                     <ul>
-                      <li>Nombre: <strong><%= result.name %></strong></li>
-                      <li>Apellidos: <strong><%= result.last_name %></strong></li>
-                      <li>Modelo: <strong><%= result.model %></strong></li>
+                      <li>Name: <strong><%= result.name %></strong></li>
+                      <li>Last Name: <strong><%= result.last_name %></strong></li>
+                      <li>Phone model: <strong><%= result.model %></strong></li>
                       <li>Color: <strong><%= result.color %></strong></li>
                     </ul>
                   </p>
@@ -116,12 +133,12 @@
                 <div class="card-footer bg-transparent border-success d-flex justify-content-around">
                   <div class="borrar">
                     <a href="/users/delete/<%= result.user_id %>" class="btn btn-danger">
-                      Eliminar
+                      Delete
                     </a>
                   </div>
                   <div class="editar">
                     <a href="/users/profile/<%= result.user_id %>" class="btn btn-primary">
-                      Modificar
+                      Modify
                     </a>
                   </div>
                 </div>
@@ -131,7 +148,12 @@
           </div>
       </div>
     </main>
-    <!-- Optional JavaScript -->
+    <footer class="footer">
+      <div class="col-12 bg-dark text-center">
+        <span class="text-muted">Copyright &copy; 2020. Alfonso Rojo. All Rights reserved</span>
+      </div>
+    </footer>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
