@@ -16,6 +16,7 @@ Toda la web sera responsive, teniendo como principal diferencia la visualizacion
 Tecnologias usadas:
   - NodeJS: 
     > Express
+  - Express
     > View = EJS
   - Javascript (ES6)
   - HTML 5
