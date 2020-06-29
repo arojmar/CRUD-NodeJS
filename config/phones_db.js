@@ -14,7 +14,7 @@ var connection = mysql.createConnection({
 // connect
 connection.connect(error => {
     if(error) throw error;
-    else console.log("Connected to PHONES_DB");
+    else console.log("Connected to " +  connection.config.database);
 });
 
 // exporto la conexion para que pueda ser utilizada en los otros ficheros
